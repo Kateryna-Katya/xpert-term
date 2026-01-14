@@ -1,56 +1,496 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/xpert-term/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xpert Term | Передовая IT-школа во Франции</title>
+  <meta name="description"
+    content="Инновационное IT-образование: от основ до AI-технологий. Платформа года для вашего карьерного роста.">
+
+<link rel="icon" type="image/svg+xml"
+  href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='8' fill='url(%23paint0_linear)'/%3E%3Cpath d='M10 10L22 22M22 10L10 22' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='0' y1='0' x2='32' y2='32' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%236366F1'/%3E%3Cstop offset='1' stop-color='%2310B981'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
+    rel="stylesheet">
     <script type="module" crossorigin src="/xpert-term/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/xpert-term/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/xpert-term/assets/styles-IvMXfKuX.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+    <header class="header" id="header">
+  <div class="container header__container">
+    <a href="/" class="logo">
+      <span class="logo__icon"></span>
+      <span class="logo__text">Xpert<span class="text-accent">Term</span></span>
+    </a>
+
+    <nav class="nav" id="nav-menu">
+      <ul class="nav__list">
+        <li><a href="#hero" class="nav__link">Главная</a></li>
+        <li><a href="#courses" class="nav__link">Обучение</a></li>
+        <li><a href="#benefits" class="nav__link">Преимущества</a></li>
+        <li><a href="#innovations" class="nav__link">Инновации</a></li>
+        <li><a href="#blog" class="nav__link">Блог</a></li>
       </ul>
     </nav>
+
+    <div class="header__actions">
+      <a href="#contact" class="btn btn--outline btn--sm">Связаться</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
-
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu__content">
+    <ul class="mobile-menu__list">
+      <li><a href="#hero" class="mobile-menu__link">Главная</a></li>
+      <li><a href="#courses" class="mobile-menu__link">Обучение</a></li>
+      <li><a href="#benefits" class="mobile-menu__link">Преимущества</a></li>
+      <li><a href="#innovations" class="mobile-menu__link">Инновации</a></li>
+      <li><a href="#blog" class="mobile-menu__link">Блог</a></li>
+      <li><a href="#contact" class="mobile-menu__link btn btn--primary">Запросить доступ</a></li>
+    </ul>
+  </div>
+</div>
 
     <main>
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="hero">
+    <div class="hero__bg">
+        <div class="hero__blob hero__blob--1"></div>
+        <div class="hero__blob hero__blob--2"></div>
+    </div>
+
+    <div class="container hero__container">
+        <div class="hero__content">
+            <div class="hero__badge reveal">
+                <span class="badge__dot"></span>
+                Платформа уже доступна в Европе
+            </div>
+
+            <h1 class="hero__title reveal">
+                <span class="title__line">Технологии, которые</span>
+                <span class="title__line text-accent">меняют правила игры</span>
+            </h1>
+
+            <p class="hero__subtitle reveal">
+                Инновационная IT-школа в центре Парижа. Постройте карьеру, которая работает на вас, используя передовую
+                цифровую инфраструктуру.
+            </p>
+
+            <div class="hero__actions reveal">
+                <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+                <a href="#courses" class="btn btn--link">
+                    Узнать детали
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero__viz reveal">
+            <div class="viz__card">
+                <div class="viz__code">
+                    <span class="code__accent">const</span> platform = <span class="code__string">"Xpert-Term"</span>;
+                    <br>
+                    <span class="code__accent">await</span> platform.start();
+                </div>
+                <div class="viz__stats">
+                    <div class="stat__item">
+                        <span class="stat__val">98%</span>
+                        <span class="stat__label">Успех</span>
+                    </div>
+                    <div class="stat__item">
+                        <span class="stat__val">24/7</span>
+                        <span class="stat__label">Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about" id="courses">
+    <div class="container">
+        <div class="about__header">
+            <h2 class="section-title reveal">
+                Переосмыслите подход <br>
+                <span class="text-accent">к развитию в IT</span>
+            </h2>
+            <p class="section-subtitle reveal">
+                Xpert Term — это не просто курсы, это передовая цифровая инфраструктура, созданная экспертами для
+                быстрого старта в технологическом секторе Франции и ЕС.
+            </p>
+        </div>
+
+        <div class="about__grid">
+            <div class="about-card reveal">
+                <div class="about-card__icon">
+                    <i data-lucide="zap"></i>
+                </div>
+                <h3 class="about-card__title">Быстрый старт</h3>
+                <p class="about-card__text">
+                    Подключение к платформе занимает 2 минуты. Легко разобраться без опыта благодаря пошаговому пути,
+                    понятному каждому.
+                </p>
+            </div>
+
+            <div class="about-card reveal">
+                <div class="about-card__icon">
+                    <i data-lucide="shield-check"></i>
+                </div>
+                <h3 class="about-card__title">Проверенный партнер</h3>
+                <p class="about-card__text">
+                    Методологии, доказавшие эффективность. Мы используем практики, применимые в реальных проектах уже
+                    сегодня.
+                </p>
+            </div>
+
+            <div class="about-card reveal">
+                <div class="about-card__icon">
+                    <i data-lucide="cpu"></i>
+                </div>
+                <h3 class="about-card__title">AI-инструменты</h3>
+                <p class="about-card__text">
+                    Интеграция AI-инструментов для реальных задач. Обучаем работе с технологиями нового поколения,
+                    которые меняют правила игры.
+            </div>
+
+            <div class="about-card reveal">
+                <div class="about-card__icon">
+                    <i data-lucide="globe"></i>
+                </div>
+                <h3 class="about-card__title">Доступ в Европе</h3>
+                <p class="about-card__text">
+                    Предложение активно только в странах ЕС. Платформа уже доступна во Франции с полной поддержкой на
+                    всех этапах.
+                </p>
+            </div>
+        </div>
+
+        <div class="about__footer reveal">
+            <p>Хотите узнать больше о наших программах?</p>
+            <a href="#contact" class="btn btn--outline">Получить больше информации</a>
+        </div>
+    </div>
+</section>
+<section class="benefits" id="benefits">
+    <div class="container">
+        <div class="benefits__wrapper">
+            <div class="benefits__content">
+                <div class="benefits__tag reveal">Ваша выгода</div>
+                <h2 class="benefits__title reveal">
+                    Стратегия роста на базе <br>
+                    <span class="text-accent">инноваций 2026</span>
+                </h2>
+                <p class="benefits__text reveal">
+                    Мы разработали решения, которые меняют правила игры. Наша платформа предлагает не просто знания, а
+                    готовую технологию для пассивного дохода и профессионального масштабирования.
+                </p>
+
+                <ul class="benefits__list">
+                    <li class="benefits__item reveal">
+                        <div class="item__icon"><i data-lucide="trending-up"></i></div>
+                        <div class="item__info">
+                            <h4>Программа пассивного дохода</h4>
+                            <p>Уникальные алгоритмы управления проектами для стабильного роста.</p>
+                        </div>
+                    </li>
+                    <li class="benefits__item reveal">
+                        <div class="item__icon"><i data-lucide="award"></i></div>
+                        <div class="item__info">
+                            <h4>Экспертная поддержка</h4>
+                            <p>Сопровождение на всех этапах: от первой настройки до масштабирования.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="benefits__viz reveal">
+                <div class="stats-box">
+                    <div class="stats-box__item">
+                        <span class="stats-box__number" data-target="85">0</span><span
+                            class="stats-box__symbol">%</span>
+                        <p>Эффективность стратегии</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="stats-box__item">
+                        <span class="stats-box__number" data-target="12">0</span><span
+                            class="stats-box__symbol">k+</span>
+                        <p>Активных студентов в ЕС</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="stats-box__item">
+                        <span class="stats-box__number" data-target="94">0</span><span
+                            class="stats-box__symbol">%</span>
+                        <p>Довольных партнеров</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 94%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="innovations" id="innovations">
+    <div class="container">
+        <div class="innovations__grid">
+            <div class="innovations__visual reveal">
+                <div class="tech-hub">
+                    <div class="tech-hub__center">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <div class="tech-icon tech-icon--1"><i data-lucide="brain-circuit"></i></div>
+                    <div class="tech-icon tech-icon--2"><i data-lucide="code-2"></i></div>
+                    <div class="tech-icon tech-icon--3"><i data-lucide="database"></i></div>
+                    <div class="tech-icon tech-icon--4"><i data-lucide="terminal"></i></div>
+                </div>
+            </div>
+
+            <div class="innovations__content">
+                <div class="benefits__tag reveal">Инновации</div>
+                <h2 class="section-title reveal">
+                    Передовая цифровая <br>
+                    <span class="text-accent">инфраструктура</span>
+                </h2>
+                <p class="section-subtitle reveal">
+                    Мы интегрировали AI-инструменты для реальных задач в каждый этап обучения. Наши решения меняют
+                    правила игры, позволяя вам автоматизировать рутину и фокусироваться на созидании.
+                </p>
+
+                <div class="features-list">
+                    <div class="feature-item reveal">
+                        <div class="feature-item__header">
+                            <span class="feature-item__number">01</span>
+                            <h4>Технология нового поколения</h4>
+                        </div>
+                        <p>Доступ к закрытым AI-моделям для генерации и оптимизации кода в реальном времени.</p>
+                    </div>
+
+                    <div class="feature-item reveal">
+                        <div class="feature-item__header">
+                            <span class="feature-item__number">02</span>
+                            <h4>Cloud-экосистема</h4>
+                        </div>
+                        <p>Ваша рабочая среда развернута в облаке и доступна из любой точки Европы 24/7.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog" id="blog">
+    <div class="container">
+        <div class="blog__header reveal">
+            <div>
+                <h2 class="section-title">База знаний <span class="text-accent">Xpert Term</span></h2>
+                <p class="section-subtitle">Технологии, которые работают на вас. Узнайте больше о трендах 2026 года.</p>
+            </div>
+            <a href="#contact" class="btn btn--link">Все статьи <i data-lucide="chevron-right"></i></a>
+        </div>
+
+        <div class="blog__slider">
+            <article class="blog-card reveal">
+                <div class="blog-card__image">
+                    <img src="/xpert-term/assets/one-ChLMuNGI.jpg" alt="AI в 2026">
+                    <span class="blog-card__tag">Инновации</span>
+                </div>
+                <div class="blog-card__body">
+                    <time class="blog-card__date">14 января, 2026</time>
+                    <h3 class="blog-card__title">AI-инструменты для реальных задач: как автоматизировать 70% рутины</h3>
+                    <p class="blog-card__excerpt">Разбираем платформу года и переосмыслим подход к разработке через
+                        призму нейросетей.</p>
+                    <a href="#contact" class="blog-card__link">Читать далее</a>
+                </div>
+            </article>
+
+            <article class="blog-card reveal">
+                <div class="blog-card__image">
+                    <img src="/xpert-term/assets/two-DILbxbLN.jpg" alt="Карьера во Франции">
+                    <span class="blog-card__tag">Карьера</span>
+                </div>
+                <div class="blog-card__body">
+                    <time class="blog-card__date">10 января, 2026</time>
+                    <h3 class="blog-card__title">Постройте карьеру, которая работает на вас: рынок IT Франции</h3>
+                    <p class="blog-card__excerpt">Оценить перспективы проекта и расширить горизонты в европейском
+                        технологическом секторе.</p>
+                    <a href="#contact" class="blog-card__link">Читать далее</a>
+                </div>
+            </article>
+
+            <article class="blog-card reveal">
+                <div class="blog-card__image">
+                    <img src="/xpert-term/assets/three-f8M9zfQk.jpg" alt="Passive income">
+                    <span class="blog-card__tag">Стратегия</span>
+                </div>
+                <div class="blog-card__body">
+                    <time class="blog-card__date">05 января, 2026</time>
+                    <h3 class="blog-card__title">Технология для пассивного дохода в цифровой инфраструктуре</h3>
+                    <p class="blog-card__excerpt">Как использовать современные облачные решения для создания стабильного
+                        финансового потока.</p>
+                    <a href="#contact" class="blog-card__link">Читать далее</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact__grid">
+            <div class="contact__info reveal">
+                <div class="benefits__tag">Связаться с нами</div>
+                <h2 class="section-title">Готовы начать <br> <span class="text-accent">свой путь в IT?</span></h2>
+                <p class="section-subtitle">Оставьте заявку на бесплатную консультацию по всем вопросам. Наши эксперты
+                    свяжутся с вами в течение 30 минут.</p>
+
+                <div class="contact__details">
+                    <div class="contact__item">
+                        <i data-lucide="mail-check"></i>
+                        <div>
+                            <span>Пишите нам</span>
+                            <p>hello@xpert-term.blog</p>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <i data-lucide="map-pinned"></i>
+                        <div>
+                            <span>Наш офис в Париже</span>
+                            <p>24 Rue du Faubourg Saint-Honoré</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact__form-wrapper reveal">
+                <form class="form" id="contact-form">
+                    <div class="form__group">
+                        <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" name="email" class="form__input" placeholder="Email адрес" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="tel" name="phone" id="phone-input" class="form__input"
+                            placeholder="Номер телефона (только цифры)" required>
+                    </div>
+
+                    <div class="form__group form__group--captcha">
+                        <label for="captcha" class="form__label">Подтвердите, что вы не робот: <span
+                                id="captcha-question"></span></label>
+                        <input type="number" id="captcha-answer" class="form__input" placeholder="Ваш ответ" required>
+                    </div>
+
+                    <div class="form__group form__group--checkbox">
+                        <label class="checkbox">
+                            <input type="checkbox" required>
+                            <span class="checkbox__checkmark"></span>
+                            <span class="checkbox__text">Я согласен с <a href="./personal-data-policy.html">политикой
+                                    обработки данных</a></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary form__btn" id="submit-btn">
+                        <span>Запросить доступ</span>
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+
+                <div class="form-success" id="form-success">
+                    <div class="form-success__icon">
+                        <i data-lucide="check-circle-2"></i>
+                    </div>
+                    <h3>Заявка принята!</h3>
+                    <p>Спасибо! Мы уже изучаем ваш запрос и свяжемся с вами в ближайшее время.</p>
+                    <button class="btn btn--outline" onclick="resetForm()">Вернуться назад</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <a href="/" class="logo footer__logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Xpert<span class="text-accent">Term</span></span>
+        </a>
+        <p class="footer__desc">
+          Технологии нового поколения для построения карьеры, которая работает на вас. Обучаем лидеров цифрового мира.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Навигация</h4>
+        <ul class="footer__links">
+          <li><a href="#hero">Главная</a></li>
+          <li><a href="#courses">Обучение</a></li>
+          <li><a href="#benefits">Преимущества</a></li>
+          <li><a href="#innovations">Инновации</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Документы</h4>
+        <ul class="footer__links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="return.html">Return Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="personal-data-policy.html">Data Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Контакты</h4>
+        <ul class="footer__contact">
+          <li>
+            <i data-lucide="map-pin"></i>
+            <span>24 Rue du Faubourg Saint-Honoré, 75008 Paris, France</span>
+          </li>
+          <li>
+            <i data-lucide="phone"></i>
+            <a href="tel:+33140268500">+33 1 40 26 85 00</a>
+          </li>
+          <li>
+            <i data-lucide="mail"></i>
+            <a href="mailto:hello@xpert-term.blog">hello@xpert-term.blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 Xpert Term. Платформа уже доступна в Европе. Все права защищены.</p>
+    </div>
   </div>
 </footer>
-
+    <div class="cookie-popup" id="cookie-popup">
+      <div class="cookie-popup__container">
+        <div class="cookie-popup__info">
+          <i data-lucide="cookie"></i>
+          <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.html">Cookie
+              политике</a>.</p>
+        </div>
+        <div class="cookie-popup__actions">
+          <button class="btn btn--sm btn--outline" id="cookie-accept">Принять</button>
+        </div>
+      </div>
+    </div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
 
   </body>
 </html>
