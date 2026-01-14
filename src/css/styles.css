@@ -1384,3 +1384,73 @@ ul {
         /* Технический отступ в конце скролла */
     }
 }
+/* --- СТИЛИ ЮРИДИЧЕСКИХ СТРАНИЦ --- */
+.pages {
+    padding: 150px 0 100px;
+    background: var(--bg-dark);
+    min-height: 80vh;
+}
+
+.pages .container {
+    max-width: 800px;
+    /* Сужаем контейнер для удобства чтения текста */
+}
+
+.pages h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--text-main);
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+.pages h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 40px 0 20px;
+}
+
+.pages p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.pages ul {
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.pages ul li {
+    list-style: none;
+    position: relative;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    padding-left: 25px;
+}
+
+.pages ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 2px;
+    background: var(--accent-color);
+}
+
+/* Ссылка возврата на главную */
+.pages__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.pages__back:hover {
+    gap: 12px;
+}
